@@ -1,4 +1,4 @@
-.btn_toggle {
+.toggle-btn  {
     background-color: rgb(59, 224, 18);
     /* display: flex; */
     /* margin: 30px 50px; */
@@ -6,4 +6,9 @@
     padding: 10px 20px;
     font-weight: bold;
     color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.toggle-btn:focus {
+    outline: none;
 }

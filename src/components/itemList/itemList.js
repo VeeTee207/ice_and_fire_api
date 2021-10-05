@@ -26,7 +26,8 @@ export default class ItemList extends Component {
                 <li 
                     key = {i}
                     className = "list-group-item"
-                    onClick = { () => this.props.onCharSelected(i)}>
+                    //   41 means page #5 
+                    onClick = { () => this.props.onCharSelected(41 + i)}>
                     {item.name}
                 </li>
             )

@@ -6,12 +6,19 @@ import gotService from "../../services/gotServices";
 export default class CharDetails extends Component {
 
     gotService = new gotService();
+
     state = {
         char: null,
     }
 
     componentDidMount() {
         this.updateChar();
+    }
+
+    componentDidUpdate (prevProps) {
+        if(this.props.charId !== prevProps.charId) {
+            this.updateChar();
+        }
     }
 
     updateChar() {
@@ -24,6 +31,8 @@ export default class CharDetails extends Component {
             .then((char) => {
                 this.setState({char})
             })
+        
+        // this.foo.bar = 0;
     }
 
     render() {
